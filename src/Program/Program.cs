@@ -6,6 +6,7 @@ namespace Program
     {
         static void Main(string[] args)
         {
+            int hola = 0;
         }
     }
 }
