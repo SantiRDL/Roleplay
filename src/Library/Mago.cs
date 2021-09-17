@@ -12,7 +12,7 @@ namespace LibraryClass
         Estadisticas.Defensa = 20;
         Estadisticas.DefensaMagica = 30;
         public Equipamiento Objeto = null;
-        public Libro LibroDeHechizos = null;
+        public LibroHechizos LibroDeHechizos = null;
 
         public Mago(string nombre)
         {

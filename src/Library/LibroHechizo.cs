@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-namespace Library 
+namespace LibraryClass
 {
     public class LibroHechizos
     {
