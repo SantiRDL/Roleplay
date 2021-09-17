@@ -9,7 +9,7 @@ namespace LibraryClass
         this.Estadistica.Ataque = 50;
         this.Estadistica.Magia = 50;
         this.Estadistica.Defensa = 50;
-        this.Estadistica.DefensaMagica =50;
+        this.Estadistica.DefensaMagica = 50;
         this.Estadistica.PuntosDeVida = 90;
         
         public Equipamineto Objeto = null;
@@ -89,7 +89,7 @@ namespace LibraryClass
 
             else
             {
-                Console.WriteLine ("No hay objetos para desequipar")
+                Console.WriteLine ("No hay objetos para desequipar");
             }
         }
     }

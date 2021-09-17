@@ -6,11 +6,11 @@ namespace Program
     {
         public Estadisticas(int PuntosDeVida, int Ataque, int Magia, int Defensa, int DefensaMagica)
         {
-            this.PuntosDeVida = puntosdevida
-            this.Ataque = ataque
-            this.Magia = magia
-            this.Defensa = Defensa
-            this.DefensaMagica = defensamagica
+            this.PuntosDeVida = puntosdevida;
+            this.Ataque = ataque;
+            this.Magia = magia;
+            this.Defensa = Defensa;
+            this.DefensaMagica = defensamagica;
         }
 
         public int PuntosDeVida { get; set; }
