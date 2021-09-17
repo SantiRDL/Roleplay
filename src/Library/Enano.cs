@@ -1,14 +1,14 @@
 using System;
 
-namespace Program
+namespace LibraryClass
 {
-    class Enanos
+    class Enano
     {
         public Estadistica Estadistica;
         public Equipamiento Objeto;
         public string Nombre;
 
-        public Enanos(string nombre)
+        public Enano(string nombre)
         {
             this.Nombre = nombre;
             
@@ -22,15 +22,15 @@ namespace Program
         this.Estadistica.DefensaMagica = 60;
 
 
-        public void AtaqueFisico(gigante personajeAtacado)
+        public void AtaqueFisico(Gigante personajeAtacado)
         {
             personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadistica.PuntosDeVida - this.Estadistica.Ataque;
         }
-        public void AtaqueFisico(mago personajeAtacado)
+        public void AtaqueFisico(Mago personajeAtacado)
         {
             personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadistica.PuntosDeVida - this.Estadistica.Ataque;
         }
-        public void AtaqueFisico(elfo personajeAtacado)
+        public void AtaqueFisico(Elfo personajeAtacado)
         {
             personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadistica.PuntosDeVida - this.Estadistica.Ataque;
         }
@@ -59,15 +59,4 @@ namespace Program
             this.Estadistica.DefensaMagica = 60 - objeto.Estadistica.DefensaMagica;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 }

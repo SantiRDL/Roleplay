@@ -67,11 +67,11 @@ namespace LibraryClass
         public void EquiparObjeto(Equipamiento objeto)
         {
             this.Objeto = objeto;
-            this.Estadisticas.Ataque = 80 + objeto.Estadisticas.Ataque;
-            this.Estadisticas.PuntosDeVida = 100 + objeto.Estadisticas.PuntosDeVida;
-            this.Estadisticas.Magia = 0 + objeto.Estadisticas.Magia;
-            this.Estadisticas.Defensa = 60 + objeto.Estadisticas.Defensa;
-            this.Estadisticas.DefensaMagica = 60 + objeto.Estadisticas.DefensaMagica;
+            this.Estadisticas.Ataque += objeto.Estadisticas.Ataque;
+            this.Estadisticas.PuntosDeVida += objeto.Estadisticas.PuntosDeVida;
+            this.Estadisticas.Magia += objeto.Estadisticas.Magia;
+            this.Estadisticas.Defensa += objeto.Estadisticas.Defensa;
+            this.Estadisticas.DefensaMagica += objeto.Estadisticas.DefensaMagica;
             
 
         }
@@ -84,11 +84,11 @@ namespace LibraryClass
             if (this.Objeto != null)
             {
                 this.Objeto = null;
-                this.Estadisticas.Ataque = 80 - objeto.Estadisticas.Ataque;
-                this.Estadisticas.PuntosDeVida = 100 - objeto.Estadisticas.PuntosDeVida;
-                this.Estadisticas.Magia = 0 - objeto.Estadisticas.Magia;
-                this.Estadisticas.Defensa = 60 - objeto.Estadisticas.Defensa;
-                this.Estadisticas.DefensaMagica = 60 - objeto.Estadisticas.DefensaMagica;
+                this.Estadisticas.Ataque -= objeto.Estadisticas.Ataque;
+                this.Estadisticas.PuntosDeVida -= objeto.Estadisticas.PuntosDeVida;
+                this.Estadisticas.Magia -= objeto.Estadisticas.Magia;
+                this.Estadisticas.Defensa -= objeto.Estadisticas.Defensa;
+                this.Estadisticas.DefensaMagica -= objeto.Estadisticas.DefensaMagica;
             }
             else 
             {
