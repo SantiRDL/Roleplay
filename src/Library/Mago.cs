@@ -114,7 +114,7 @@ namespace LibraryClass
         /// Desequipa el libro de Hechizos.
         /// </summary>
         /// <param name="libro"></param>
-        public void DesequiparLibro(Libro libro)
+        public void DesequiparLibro(Libro LibroHechizos)
         {
             this.LibroDeHechizos = null;
         }
