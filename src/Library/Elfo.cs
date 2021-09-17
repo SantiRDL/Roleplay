@@ -5,7 +5,7 @@ namespace LibraryClass
     class Elfo 
     {
         public string Nombre;
-        public Estadistica Estadistica = new Estadistica ();
+        public Estadistica Estadisticas = new Estadistica ();
 
         
         public Equipamineto Objeto = null;
@@ -20,7 +20,7 @@ namespace LibraryClass
             this.Estadistica.PuntosDeVida = 90;
         }
 
-        public void AtaqueFisico (Enano personajeAtacado))
+        public void AtaqueFisico (Enano personajeAtacado)
         {
             personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Ataque;
         }
@@ -35,17 +35,17 @@ namespace LibraryClass
             personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Ataque;
         }
 
-        public void AtaqueMagico (Enano personajeAtacado))
+        public void AtaqueMagico (Enano personajeAtacado)
         {
             personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Magia;
         }
 
-        public void AtaqueMagico (Gigante personajeAtacado))
+        public void AtaqueMagico (Gigante personajeAtacado)
         {
             personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Magia;
         }
 
-        public void AtaqueMagico (Mago personajeAtacado))
+        public void AtaqueMagico (Mago personajeAtacado)
         {
             personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Magia;
         }
