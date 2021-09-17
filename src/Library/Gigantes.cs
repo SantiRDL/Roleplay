@@ -4,7 +4,7 @@ namespace LibraryClass
     class Gigante 
     {
         public string Nombre;
-        public Estadistica Estadisticas = new Estadistica;
+        public Estadistica Estadisticas = new Estadistica();
         this.Estadistica.Ataque = 80;
         this.Estadistica.Defensa = 100;
         this.Estadistica.Magia = 0;
@@ -32,27 +32,37 @@ namespace LibraryClass
             personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
         }
 
-        public void EquiparObjeto (Equipamiento objeto)
+        public void EquiparObjeto(Equipamiento objeto)
         {
-            this.Objeto = objeto;
-            this.Estadisticas.Ataque = 80 + objeto.Estadisticas.Atque;
-            this.Estadisticas.Defensa = 100 + objeto.Estadisticas.Defensa;
-            this.Estadisticas.PuntosDeVida = 90 + objeto.Estadisticas.PuntosDeVida;       
+            if (this.Objeto = null)
+            {
+                this.Objeto = objeto;
+                this.Estadisticas.Ataque += objeto.Estadisticas.Ataque;
+                this.Estadisticas.PuntosDeVida += objeto.Estadisticas.PuntosDeVida;
+                this.Estadisticas.Magia += objeto.Estadisticas.Magia;
+                this.Estadisticas.Defensa += objeto.Estadisticas.Defensa;
+                this.Estadisticas.DefensaMagica += objeto.Estadisticas.DefensaMagica;
+            }
+            else
+            {
+                Console.WriteLine("Ya hay un objeto equipado.");
+            }
         }
 
-        public void DesequiparObjeto (Equipamiento objeto)
+        public void DesequiparObjeto(Equipamiento objeto)
         {
             if (this.Objeto != null)
             {
                 this.Objeto = null;
-                this.Estadisticas.Ataque = 80 - objeto.Estadisticas.Atque;
-                this.Estadisticas.Defensa = 100 - objeto.Estadisticas.Defensa;
-                this.Estadisticas.PuntosDeVida = 90 - objeto.Estadisticas.PuntosDeVida;
+                this.Estadisticas.Ataque -= objeto.Estadisticas.Ataque;
+                this.Estadisticas.PuntosDeVida -= objeto.Estadisticas.PuntosDeVida;
+                this.Estadisticas.Magia -= objeto.Estadisticas.Magia;
+                this.Estadisticas.Defensa -= objeto.Estadisticas.Defensa;
+                this.Estadisticas.DefensaMagica -= objeto.Estadisticas.DefensaMagica;
             }
-
-            else
+            else 
             {
-                Console.WriteLine ("No hay objetos para desequipar")
+                Console.WriteLine("No hay objetos que se puedan desequipar");
             }
         }
     }

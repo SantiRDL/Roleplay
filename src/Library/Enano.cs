@@ -4,7 +4,7 @@ namespace LibraryClass
 {
     class Enano
     {
-        public Estadistica Estadistica;
+        public Estadistica Estadistica = new Estadistica();
         public Equipamiento Objeto;
         public string Nombre;
 
@@ -14,49 +14,61 @@ namespace LibraryClass
             
         }
 
-        this.Estadistica = new Estadistica;
-        this.Estadistica.Ataque = 80;
-        this.Estadistica.PuntosDeVida = 100;
-        this.Estadistica.Magia = 0;
-        this.Estadistica.Defensa = 60;
-        this.Estadistica.DefensaMagica = 60;
+        this.Estadisticas = new Estadistica;
+        this.Estadisticas.Ataque = 80;
+        this.Estadisticas.PuntosDeVida = 100;
+        this.Estadisticas.Magia = 0;
+        this.Estadisticas.Defensa = 60;
+        this.Estadisticas.DefensaMagica = 60;
 
 
         public void AtaqueFisico(Gigante personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadistica.PuntosDeVida - this.Estadistica.Ataque;
+            personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
         }
         public void AtaqueFisico(Mago personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadistica.PuntosDeVida - this.Estadistica.Ataque;
+            personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
         }
         public void AtaqueFisico(Elfo personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadistica.PuntosDeVida - this.Estadistica.Ataque;
+            personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
         }
         
         
         
         public void EquiparObjeto(Equipamiento objeto)
         {
-            this.Objeto = objeto;
-            this.Estadistica.Ataque = 80 + objeto.Estadistica.Ataque;
-            this.Estadistica.PuntosDeVida = 100 + objeto.Estadistica.PuntosDeVida;
-            this.Estadistica.Magia = 0 + objeto.Estadistica.Magia;
-            this.Estadistica.Defensa = 60 + objeto.Estadistica.Defensa;
-            this.Estadistica.DefensaMagica = 60 + objeto.Estadistica.DefensaMagica;
-            
-
+            if (this.Objeto = null)
+            {
+                this.Objeto = objeto;
+                this.Estadisticas.Ataque += objeto.Estadisticas.Ataque;
+                this.Estadisticas.PuntosDeVida += objeto.Estadisticas.PuntosDeVida;
+                this.Estadisticas.Magia += objeto.Estadisticas.Magia;
+                this.Estadisticas.Defensa += objeto.Estadisticas.Defensa;
+                this.Estadisticas.DefensaMagica += objeto.Estadisticas.DefensaMagica;
+            }
+            else
+            {
+                Console.WriteLine("Ya hay un objeto equipado.");
+            }
         }
 
         public void DesequiparObjeto(Equipamiento objeto)
         {
-            this.Objeto = objeto;
-            this.Estadistica.Ataque = 80 - objeto.Estadistica.Ataque;
-            this.Estadistica.PuntosDeVida = 100 - objeto.Estadistica.PuntosDeVida;
-            this.Estadistica.Magia = 0 - objeto.Estadistica.Magia;
-            this.Estadistica.Defensa = 60 - objeto.Estadistica.Defensa;
-            this.Estadistica.DefensaMagica = 60 - objeto.Estadistica.DefensaMagica;
+            if (this.Objeto != null)
+            {
+                this.Objeto = null;
+                this.Estadisticas.Ataque -= objeto.Estadisticas.Ataque;
+                this.Estadisticas.PuntosDeVida -= objeto.Estadisticas.PuntosDeVida;
+                this.Estadisticas.Magia -= objeto.Estadisticas.Magia;
+                this.Estadisticas.Defensa -= objeto.Estadisticas.Defensa;
+                this.Estadisticas.DefensaMagica -= objeto.Estadisticas.DefensaMagica;
+            }
+            else 
+            {
+                Console.WriteLine("No hay objetos que se puedan desequipar");
+            }
         }
     }
 }

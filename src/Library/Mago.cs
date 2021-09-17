@@ -5,7 +5,7 @@ namespace LibraryClass
     class Mago
     {
         public string Nombre;
-        public Estadistica Estadisticas = new Estadistica;
+        public Estadistica Estadisticas = new Estadistica();
         Estadisticas.Ataque = 10;
         Estadisticas.PuntosDeVida = 70;
         Estadisticas.Magia = 90;
@@ -66,14 +66,19 @@ namespace LibraryClass
         /// <param name="objeto"></param>
         public void EquiparObjeto(Equipamiento objeto)
         {
-            this.Objeto = objeto;
-            this.Estadisticas.Ataque += objeto.Estadisticas.Ataque;
-            this.Estadisticas.PuntosDeVida += objeto.Estadisticas.PuntosDeVida;
-            this.Estadisticas.Magia += objeto.Estadisticas.Magia;
-            this.Estadisticas.Defensa += objeto.Estadisticas.Defensa;
-            this.Estadisticas.DefensaMagica += objeto.Estadisticas.DefensaMagica;
-            
-
+            if (this.Objeto = null)
+            {
+                this.Objeto = objeto;
+                this.Estadisticas.Ataque += objeto.Estadisticas.Ataque;
+                this.Estadisticas.PuntosDeVida += objeto.Estadisticas.PuntosDeVida;
+                this.Estadisticas.Magia += objeto.Estadisticas.Magia;
+                this.Estadisticas.Defensa += objeto.Estadisticas.Defensa;
+                this.Estadisticas.DefensaMagica += objeto.Estadisticas.DefensaMagica;
+            }
+            else
+            {
+                Console.WriteLine("Ya hay un objeto equipado.");
+            }
         }
         /// <summary>
         /// Toma un objeto ya equipado como parametro, lo quita del atributo Objeto y suma sus estadisticas a las estadisticas del personaje.
