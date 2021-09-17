@@ -67,12 +67,15 @@ namespace LibraryClass
 
         public void EquiparObjeto (Equipamiento objeto)
         {
-            this.Objeto = objeto;
-            this.Estadistica.Ataque += objeto.Estadistica.Ataque;
-            this.Estadistica.Magia += objeto.Estadistica.Magia;
-            this.Estadistica.Defensa += objeto.Estadistica.Defensa;
-            this.Estadistica.DefensaMagica += objeto.Estadistica.DefensaMagica;
-            this.Estadistica.PuntosDeVida += objeto.Estadistica.PuntosDeVida;       
+            if (this.Objeto == null)
+            {
+                this.Objeto = objeto;
+                this.Estadistica.Ataque += objeto.Estadistica.Ataque;
+                this.Estadistica.Magia += objeto.Estadistica.Magia;
+                this.Estadistica.Defensa += objeto.Estadistica.Defensa;
+                this.Estadistica.DefensaMagica += objeto.Estadistica.DefensaMagica;
+                this.Estadistica.PuntosDeVida += objeto.Estadistica.PuntosDeVida;
+            }       
         }
 
         public void DesequiparObjeto (Equipamiento objeto)
