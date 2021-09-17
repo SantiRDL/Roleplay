@@ -134,8 +134,8 @@ namespace LibraryClass
         {
             if (this.LibroDeHechizos != null)
             {
-                personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.AtaqueHechizo;
-                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.NombreHechizo} causando {this.LibroDeHechizos.AtaqueHechizo} de daño");
+                personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.Ataque;
+                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.AtaqueHechizo} de daño");
             }
             else
             {
@@ -146,8 +146,8 @@ namespace LibraryClass
         {
             if (this.LibroDeHechizos != null)
             {
-                personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.AtaqueHechizo;
-                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.NombreHechizo} causando {this.LibroDeHechizos.AtaqueHechizo} de daño");
+                personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.Ataque;
+                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.AtaqueHechizo} de daño");
             }
             else
             {
@@ -158,8 +158,8 @@ namespace LibraryClass
         {
             if (this.LibroDeHechizos != null)
             {
-                personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.AtaqueHechizo;
-                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.NombreHechizo} causando {this.LibroDeHechizos.AtaqueHechizo} de daño");
+                personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.Ataque;
+                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.AtaqueHechizo} de daño");
             }
             else
             {

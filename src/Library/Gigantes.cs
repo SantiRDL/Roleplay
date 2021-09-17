@@ -8,7 +8,7 @@ namespace LibraryClass
         
         
         public Equipamineto Objeto = null;
-        public Gigantes(string nombre)
+        public Gigante(string nombre)
         {
             this.Nombre = nombre;
             
