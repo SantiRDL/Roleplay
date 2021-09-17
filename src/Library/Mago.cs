@@ -6,11 +6,11 @@ namespace LibraryClass
     {
         public string Nombre;
         public Estadistica Estadisticas = new Estadistica;
-        this.Estadisticas.Ataque = 10;
-        this.Estadisticas.PuntosDeVida = 70;
-        this.Estadisticas.Magia = 90;
-        this.Estadisticas.Defensa = 30;
-        this.Estadisticas.DefensaMagica = 30;
+        Estadisticas.Ataque = 10;
+        Estadisticas.PuntosDeVida = 70;
+        Estadisticas.Magia = 90;
+        Estadisticas.Defensa = 30;
+        Estadisticas.DefensaMagica = 30;
         public Equipamiento Objeto = null;
         public Libro LibroDeHechizos = null;
 
