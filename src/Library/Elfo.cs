@@ -35,17 +35,17 @@ namespace LibraryClass
 
         public void AtaqueMagico (Enano personajeAtacado))
         {
-            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.AtaqueMagico;
+            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Magia;
         }
 
         public void AtaqueMagico (Gigante personajeAtacado))
         {
-            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.AtaqueMagico;
+            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Magia;
         }
 
         public void AtaqueMagico (Mago personajeAtacado))
         {
-            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.AtaqueMagico;
+            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Magia;
         }
 
         public void Curar (Enano personajeAtacado)
