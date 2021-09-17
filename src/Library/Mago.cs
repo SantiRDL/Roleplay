@@ -9,7 +9,7 @@ namespace LibraryClass
         Estadisticas.Ataque = 10;
         Estadisticas.PuntosDeVida = 70;
         Estadisticas.Magia = 90;
-        Estadisticas.Defensa = 30;
+        Estadisticas.Defensa = 20;
         Estadisticas.DefensaMagica = 30;
         public Equipamiento Objeto = null;
         public Libro LibroDeHechizos = null;
