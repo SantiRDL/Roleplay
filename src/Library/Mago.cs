@@ -6,17 +6,19 @@ namespace LibraryClass
     {
         public string Nombre;
         public Estadistica Estadisticas = new Estadistica();
-        Estadisticas.Ataque = 10;
-        Estadisticas.PuntosDeVida = 70;
-        Estadisticas.Magia = 90;
-        Estadisticas.Defensa = 20;
-        Estadisticas.DefensaMagica = 30;
+        
         public Equipamiento Objeto = null;
         public LibroHechizos LibroDeHechizos = null;
 
         public Mago(string nombre)
         {
             this.Nombre = nombre;
+
+            this.Estadisticas.Ataque = 10;
+            this.Estadisticas.PuntosDeVida = 70;
+            this.Estadisticas.Magia = 90;
+            this.Estadisticas.Defensa = 20;
+            this.Estadisticas.DefensaMagica = 30;
             
         }
 
@@ -66,14 +68,14 @@ namespace LibraryClass
         /// <param name="objeto"></param>
         public void EquiparObjeto(Equipamiento objeto)
         {
-            if (this.Objeto = null)
+            if (this.Objeto == null)
             {
                 this.Objeto = objeto;
-                this.Estadisticas.Ataque += objeto.Estadisticas.Ataque;
-                this.Estadisticas.PuntosDeVida += objeto.Estadisticas.PuntosDeVida;
-                this.Estadisticas.Magia += objeto.Estadisticas.Magia;
-                this.Estadisticas.Defensa += objeto.Estadisticas.Defensa;
-                this.Estadisticas.DefensaMagica += objeto.Estadisticas.DefensaMagica;
+                this.Estadisticas.Ataque += objeto.EstadisticaPotenciada.Ataque;
+                this.Estadisticas.PuntosDeVida += objeto.EstadisticaPotenciada.PuntosDeVida;
+                this.Estadisticas.Magia += objeto.EstadisticaPotenciada.Magia;
+                this.Estadisticas.Defensa += objeto.EstadisticaPotenciada.Defensa;
+                this.Estadisticas.DefensaMagica += objeto.EstadisticaPotenciada.DefensaMagica;
             }
             else
             {
@@ -89,11 +91,11 @@ namespace LibraryClass
             if (this.Objeto != null)
             {
                 this.Objeto = null;
-                this.Estadisticas.Ataque -= objeto.Estadisticas.Ataque;
-                this.Estadisticas.PuntosDeVida -= objeto.Estadisticas.PuntosDeVida;
-                this.Estadisticas.Magia -= objeto.Estadisticas.Magia;
-                this.Estadisticas.Defensa -= objeto.Estadisticas.Defensa;
-                this.Estadisticas.DefensaMagica -= objeto.Estadisticas.DefensaMagica;
+                this.Estadisticas.Ataque -= objeto.EstadisticaPotenciada.Ataque;
+                this.Estadisticas.PuntosDeVida -= objeto.EstadisticaPotenciada.PuntosDeVida;
+                this.Estadisticas.Magia -= objeto.EstadisticaPotenciada.Magia;
+                this.Estadisticas.Defensa -= objeto.EstadisticaPotenciada.Defensa;
+                this.Estadisticas.DefensaMagica -= objeto.EstadisticaPotenciada.DefensaMagica;
             }
             else 
             {
@@ -106,7 +108,7 @@ namespace LibraryClass
         /// <param name="libro"></param>
         public void EquiparLibro(Libro libro)
         {
-            if (this.LibroDeHechizos = null)
+            if (this.LibroDeHechizos == null)
             {
                 this.LibroDeHechizos = libro;
             }
