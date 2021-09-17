@@ -4,9 +4,11 @@ namespace LibraryClass
     class Gigante 
     {
         public string Nombre;
-        public Estadistica Estadistica = new Estadistica;
+        public Estadistica Estadisticas = new Estadistica;
         this.Estadistica.Ataque = 80;
         this.Estadistica.Defensa = 100;
+        this.Estadistica.Magia = 0;
+        this.Estadistica.DefensaMagica = 0;
         this.Estadistica.PuntosDeVida = 90;
         
         public Equipamineto Objeto = null;
@@ -17,25 +19,25 @@ namespace LibraryClass
 
         public void AtaqueFisico (Enano personajeAtacado))
         {
-            personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadistica.Ataque;
+            personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
         }
 
         public void AtaqueFisico (Elfo personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadistica.Ataque;
+            personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
         }
 
         public void AtaqueFisico (Mago personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadistica.Ataque;
+            personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
         }
 
         public void EquiparObjeto (Equipamiento objeto)
         {
             this.Objeto = objeto;
-            this.Estadistica.Ataque = 80 + objeto.Estadistica.Atque;
-            this.Estadistica.Defensa = 100 + objeto.Estadistica.Defensa;
-            this.Estadistica.PuntosDeVida = 90 + objeto.Estadistica.PuntosDeVida;       
+            this.Estadisticas.Ataque = 80 + objeto.Estadisticas.Atque;
+            this.Estadisticas.Defensa = 100 + objeto.Estadisticas.Defensa;
+            this.Estadisticas.PuntosDeVida = 90 + objeto.Estadisticas.PuntosDeVida;       
         }
 
         public void DesequiparObjeto (Equipamiento objeto)
@@ -43,9 +45,9 @@ namespace LibraryClass
             if (this.Objeto != null)
             {
                 this.Objeto = null;
-                 this.Estadistica.Ataque = 80 - objeto.Estadistica.Atque;
-            this.Estadistica.Defensa = 100 - objeto.Estadistica.Defensa;
-            this.Estadistica.PuntosDeVida = 90 - objeto.Estadistica.PuntosDeVida;
+                this.Estadisticas.Ataque = 80 - objeto.Estadisticas.Atque;
+                this.Estadisticas.Defensa = 100 - objeto.Estadisticas.Defensa;
+                this.Estadisticas.PuntosDeVida = 90 - objeto.Estadisticas.PuntosDeVida;
             }
 
             else
