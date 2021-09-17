@@ -20,18 +20,50 @@ namespace LibraryClass
 
         public void AtaqueFisico (Enano personajeAtacado))
         {
-            personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadistica.Ataque;
+            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Ataque;
         }
 
         public void AtaqueFisico (Gigante personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadistica.Ataque;
+            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Ataque;
         }
 
         public void AtaqueFisico (Mago personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadistica.Ataque;
+            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Ataque;
         }
+
+        public void AtaqueMagico (Enano personajeAtacado))
+        {
+            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.AtaqueMagico;
+        }
+
+        public void AtaqueMagico (Gigante personajeAtacado))
+        {
+            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.AtaqueMagico;
+        }
+
+        public void AtaqueMagico (Mago personajeAtacado))
+        {
+            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.AtaqueMagico;
+        }
+
+        public void Curar (Enano personajeAtacado)
+        {
+            personajeAtacado.Estadistica.PuntosDeVida += this.Estadistica.Magia;
+        }
+
+        public void Curar (Gigante personajeAtacado)
+        {
+            personajeAtacado.Estadistica.PuntosDeVida += this.Estadistica.Magia;
+        }
+
+        public void Curar (Mago personajeAtacado)
+        {
+            personajeAtacado.Estadistica.PuntosDeVida += this.Estadistica.Magia;
+        }
+
+        
 
         public void EquiparObjeto (Equipamiento objeto)
         {
