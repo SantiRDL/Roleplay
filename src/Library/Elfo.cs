@@ -14,20 +14,7 @@ namespace LibraryClass
             this.Nombre = nombre;
         }
 
-        public void AtaqueMagico (Enano personajeAtacado)
-        {
-            personajeAtacado.Estadisticas.PuntosDeVida -= this.Estadisticas.Magia;
-        }
-
-        public void AtaqueMagico (Gigante personajeAtacado)
-        {
-            personajeAtacado.Estadisticas.PuntosDeVida -= this.Estadisticas.Magia;
-        }
-
-        public void AtaqueMagico (Mago personajeAtacado)
-        {
-            personajeAtacado.Estadisticas.PuntosDeVida -= this.Estadisticas.Magia;
-        }
+        
 
         public void Curar (Enano personajeAtacado)
         {
