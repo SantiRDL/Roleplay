@@ -28,5 +28,12 @@ namespace LibraryClass
         {
             personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
         }
+<<<<<<< HEAD
+=======
+        public int ObtenerAtaque()
+        {
+            return this.Estadisticas.Ataque;
+        }
+>>>>>>> efd2a1f22fdeba0c8327e93f33ff2ec9cff77d7a
     }
 }

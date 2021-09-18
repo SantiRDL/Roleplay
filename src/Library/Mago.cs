@@ -52,49 +52,7 @@ namespace LibraryClass
         {
             personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Magia;
         }
-
-        
-        
-        /// <summary>
-        /// Toma un objeto de tipo equipamiento como parametro, lo coloca en el atributo Objeto y suma sus estadisticas a las estdisticas del personaje.
-        /// </summary>
-        /// <param name="objeto"></param>
-        public void EquiparObjeto(Equipamiento objeto)
-        {
-            if (this.Objeto == null)
-            {
-                this.Objeto = objeto;
-                this.Estadisticas.Ataque += objeto.EstadisticaPotenciada.Ataque;
-                this.Estadisticas.PuntosDeVida += objeto.EstadisticaPotenciada.PuntosDeVida;
-                this.Estadisticas.Magia += objeto.EstadisticaPotenciada.Magia;
-                this.Estadisticas.Defensa += objeto.EstadisticaPotenciada.Defensa;
-                this.Estadisticas.DefensaMagica += objeto.EstadisticaPotenciada.DefensaMagica;
-            }
-            else
-            {
-                Console.WriteLine("Ya hay un objeto equipado.");
-            }
-        }
-        /// <summary>
-        /// Toma un objeto ya equipado como parametro, lo quita del atributo Objeto y suma sus estadisticas a las estadisticas del personaje.
-        /// </summary>
-        /// <param name="objeto"></param>
-        public void DesequiparObjeto(Equipamiento objeto)
-        {
-            if (this.Objeto != null)
-            {
-                this.Objeto = null;
-                this.Estadisticas.Ataque -= objeto.EstadisticaPotenciada.Ataque;
-                this.Estadisticas.PuntosDeVida -= objeto.EstadisticaPotenciada.PuntosDeVida;
-                this.Estadisticas.Magia -= objeto.EstadisticaPotenciada.Magia;
-                this.Estadisticas.Defensa -= objeto.EstadisticaPotenciada.Defensa;
-                this.Estadisticas.DefensaMagica -= objeto.EstadisticaPotenciada.DefensaMagica;
-            }
-            else 
-            {
-                Console.WriteLine("No hay objetos que se puedan desequipar");
-            }
-        }
+                
         /// <summary>
         /// Toma un objeto de tipo libro y, en caso de que no haya ningun libro equipado, lo equipa en el atributo LibroDeHechizos.
         /// </summary>
@@ -135,5 +93,36 @@ namespace LibraryClass
                 Console.WriteLine("No hay un libro de hechizos equipado.");
             }
         }
+<<<<<<< HEAD
+=======
+        public void LanzarHechizo(Enano personajeAtacado)
+        {
+            if (this.LibroDeHechizos != null)
+            {
+                personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.Ataque;
+                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.Ataque} de daño");
+            }
+            else
+            {
+                Console.WriteLine("No hay un libro de hechizos equipado.");
+            }
+        }
+        public void LanzarHechizo(Elfo personajeAtacado)
+        {
+            if (this.LibroDeHechizos != null)
+            {
+                personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.Ataque;
+                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.Ataque} de daño");
+            }
+            else
+            {
+                Console.WriteLine("No hay un libro de hechizos equipado.");
+            }
+        }
+        public int ObtenerAtaque()
+        {
+            return this.Estadisticas.Ataque;
+        }
+>>>>>>> efd2a1f22fdeba0c8327e93f33ff2ec9cff77d7a
     }
 }
