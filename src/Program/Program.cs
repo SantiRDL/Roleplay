@@ -13,7 +13,7 @@ namespace Program
             Equipamiento capa = new Equipamiento("capa", "ropaje", dos);
 
             Equipamiento arco = new Equipamiento("Arco", "arma", 0, 30, 0, 0, 0 );
-            Equipamiento martillo = new Equipamiento("Martillo", "arma", 0, 25, 0, 0, 0 );
+            Equipamiento martillo = new Equipamiento("Martillo", "arma", 0, 27, 0, 0, 0 );
 
 
         }
