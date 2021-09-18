@@ -34,6 +34,7 @@ namespace LibraryClass
         }
 <<<<<<< HEAD
 =======
+        //Obt
         public int ObtenerAtaque()
         {
             return this.Estadisticas.Ataque;
