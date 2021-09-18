@@ -3,7 +3,7 @@ using System;
 namespace LibraryClass
 {
     
-    class Ataque
+    public class Ataque
     {
         /// <summary>
         /// Este método hace que se le quiten los puntos de vida del personaje2, con los puntos de ataque del personaje1. 
