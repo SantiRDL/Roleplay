@@ -8,7 +8,9 @@ namespace Test.Library
 
     public class ExampleTest
     {
-
+        /// <summary>
+        /// Este test comprobara si el enano efectivamente ataca al gigante
+        /// </summary>
         [Test]
         public void AtaqueFisicoTest()
         {
