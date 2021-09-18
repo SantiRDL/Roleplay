@@ -1,5 +1,5 @@
 using NUnit.Framework;
-
+using LibraryClass;
 namespace Test.Library
 {
 
@@ -8,11 +8,13 @@ namespace Test.Library
     {
 
         [Test]
-        public void dummyTest()
+        public void AtaqueFisicoTest()
         {
-            Assert.True(true);
+            Elfo elfo = new Elfo("elfo");
+            Mago mago = new Mago("mago");
+            Ataque.AtaqueFisico(elfo,mago);
+            Assert.AreEqual(mago.Estadisticas.PuntosDeVida,20);
         }
-
     }
 
 
