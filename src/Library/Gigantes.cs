@@ -28,43 +28,12 @@ namespace LibraryClass
         {
             personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
         }
-
-        public void EquiparObjeto(Equipamiento objeto)
-        {
-            if (this.Objeto == null)
-            {
-                this.Objeto = objeto;
-                this.Estadisticas.Ataque += objeto.EstadisticaPotenciada.Ataque;
-                this.Estadisticas.PuntosDeVida += objeto.EstadisticaPotenciada.PuntosDeVida;
-                this.Estadisticas.Magia += objeto.EstadisticaPotenciada.Magia;
-                this.Estadisticas.Defensa += objeto.EstadisticaPotenciada.Defensa;
-                this.Estadisticas.DefensaMagica += objeto.EstadisticaPotenciada.DefensaMagica;
-            }
-            else
-            {
-                Console.WriteLine("Ya hay un objeto equipado.");
-            }
-        }
-
-        public void DesequiparObjeto(Equipamiento objeto)
-        {
-            if (this.Objeto != null)
-            {
-                this.Objeto = null;
-                this.Estadisticas.Ataque -= objeto.EstadisticaPotenciada.Ataque;
-                this.Estadisticas.PuntosDeVida -= objeto.EstadisticaPotenciada.PuntosDeVida;
-                this.Estadisticas.Magia -= objeto.EstadisticaPotenciada.Magia;
-                this.Estadisticas.Defensa -= objeto.EstadisticaPotenciada.Defensa;
-                this.Estadisticas.DefensaMagica -= objeto.EstadisticaPotenciada.DefensaMagica;
-            }
-            else 
-            {
-                Console.WriteLine("No hay objetos que se puedan desequipar");
-            }
-        }
+<<<<<<< HEAD
+=======
         public int ObtenerAtaque()
         {
             return this.Estadisticas.Ataque;
         }
+>>>>>>> efd2a1f22fdeba0c8327e93f33ff2ec9cff77d7a
     }
 }
