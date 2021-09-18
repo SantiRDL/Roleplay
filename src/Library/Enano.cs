@@ -4,7 +4,7 @@ namespace LibraryClass
 {
     class Enano
     {
-        public Estadistica Estadisticas = new Estadistica();
+        public Estadistica Estadisticas = new Estadistica(80, 100, 0, 60, 60);
         public Equipamiento Objeto;
         public string Nombre;
 

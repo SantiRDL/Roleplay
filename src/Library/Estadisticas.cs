@@ -2,15 +2,15 @@ using System;
 
 namespace LibraryClass
 {
-    class Estadisticas
+    class Estadistica
     {
-        public Estadisticas(int PuntosDeVida, int Ataque, int Magia, int Defensa, int DefensaMagica)
+        public Estadistica(int puntosDeVida, int ataque, int magia, int defensa, int defensaMagica)
         {
-            this.PuntosDeVida = puntosdevida;
+            this.PuntosDeVida = puntosDeVida;
             this.Ataque = ataque;
             this.Magia = magia;
             this.Defensa = Defensa;
-            this.DefensaMagica = defensamagica;
+            this.DefensaMagica = defensaMagica;
         }
 
         public int PuntosDeVida { get; set; }
