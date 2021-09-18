@@ -46,17 +46,17 @@ namespace LibraryClass
 
         public void Curar (Enano personajeAtacado)
         {
-            personajeAtacado.Estadisticas.PuntosDeVida += this.Estadisticas.Magia;
+            personajeAtacado.Estadisticas.PuntosDeVida = 80;
         }
 
         public void Curar (Gigante personajeAtacado)
         {
-            personajeAtacado.Estadisticas.PuntosDeVida += this.Estadisticas.Magia;
+            personajeAtacado.Estadisticas.PuntosDeVida = 90;
         }
 
         public void Curar (Mago personajeAtacado)
         {
-            personajeAtacado.Estadisticas.PuntosDeVida += this.Estadisticas.Magia;
+            personajeAtacado.Estadisticas.PuntosDeVida = 70;
         }
 
         
