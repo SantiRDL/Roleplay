@@ -93,8 +93,7 @@ namespace LibraryClass
                 Console.WriteLine("No hay un libro de hechizos equipado.");
             }
         }
-<<<<<<< HEAD
-=======
+
         public void LanzarHechizo(Enano personajeAtacado)
         {
             if (this.LibroDeHechizos != null)
@@ -123,6 +122,5 @@ namespace LibraryClass
         {
             return this.Estadisticas.Ataque;
         }
->>>>>>> efd2a1f22fdeba0c8327e93f33ff2ec9cff77d7a
     }
 }
