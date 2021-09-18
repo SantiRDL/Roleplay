@@ -2,7 +2,7 @@ using System;
 
 namespace LibraryClass
 {
-    class Mago
+    public class Mago
     {
         public string Nombre;
         public Estadistica Estadisticas = new Estadistica(70, 10, 90, 20, 30);
@@ -15,26 +15,6 @@ namespace LibraryClass
             this.Nombre = nombre;   
         }
 
-        
-        
-
-        /// <summary>
-        /// Reducen los puntos de vida del personaje atacado en base a las estadisticas de ataque.
-        /// Hay 3 metodos distintos de ataque, uno para cada tipo de personaje, el programa ejecuta uno u otro en base al parametro que se introduzca.
-        /// </summary>
-        /// <param name="personajeAtacado"></param>
-        public void AtaqueFisico(Gigante personajeAtacado)
-        {
-            personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
-        }
-        public void AtaqueFisico(Enano personajeAtacado)
-        {
-            personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
-        }
-        public void AtaqueFisico(Elfo personajeAtacado)
-        {
-            personajeAtacado.Estadisticas.PuntosDeVida = personajeAtacado.Estadisticas.PuntosDeVida - this.Estadisticas.Ataque;
-        }
         /// <summary>
         /// Reducen los puntos de vida del personaje atacado en base a la estadistica magia.
         /// Hay 3 metodos distintos de ataque magico, uno para cada tipo de personaje, el programa ejecuta uno u otro en base al parametro que se introduzca.
