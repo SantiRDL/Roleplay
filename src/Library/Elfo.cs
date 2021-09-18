@@ -8,7 +8,7 @@ namespace LibraryClass
         public Estadistica Estadisticas = new Estadistica(50, 50, 50, 50, 90);
 
         
-        public Equipamineto Objeto = null;
+        public Equipamiento Objeto = null;
         public Elfo(string nombre)
         {
             this.Nombre = nombre;
@@ -16,47 +16,47 @@ namespace LibraryClass
 
         public void AtaqueFisico (Enano personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Ataque;
+            personajeAtacado.Estadisticas.PuntosDeVida -= this.Estadisticas.Ataque;
         }
 
         public void AtaqueFisico (Gigante personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Ataque;
+            personajeAtacado.Estadisticas.PuntosDeVida -= this.Estadisticas.Ataque;
         }
 
         public void AtaqueFisico (Mago personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Ataque;
+            personajeAtacado.Estadisticas.PuntosDeVida -= this.Estadisticas.Ataque;
         }
 
         public void AtaqueMagico (Enano personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Magia;
+            personajeAtacado.Estadisticas.PuntosDeVida -= this.Estadisticas.Magia;
         }
 
         public void AtaqueMagico (Gigante personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Magia;
+            personajeAtacado.Estadisticas.PuntosDeVida -= this.Estadisticas.Magia;
         }
 
         public void AtaqueMagico (Mago personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida -= this.Estadistica.Magia;
+            personajeAtacado.Estadisticas.PuntosDeVida -= this.Estadisticas.Magia;
         }
 
         public void Curar (Enano personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida += this.Estadistica.Magia;
+            personajeAtacado.Estadisticas.PuntosDeVida += this.Estadisticas.Magia;
         }
 
         public void Curar (Gigante personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida += this.Estadistica.Magia;
+            personajeAtacado.Estadisticas.PuntosDeVida += this.Estadisticas.Magia;
         }
 
         public void Curar (Mago personajeAtacado)
         {
-            personajeAtacado.Estadistica.PuntosDeVida += this.Estadistica.Magia;
+            personajeAtacado.Estadisticas.PuntosDeVida += this.Estadisticas.Magia;
         }
 
         
@@ -66,11 +66,11 @@ namespace LibraryClass
             if (this.Objeto == null)
             {
                 this.Objeto = objeto;
-                this.Estadistica.Ataque += objeto.Estadistica.Ataque;
-                this.Estadistica.Magia += objeto.Estadistica.Magia;
-                this.Estadistica.Defensa += objeto.Estadistica.Defensa;
-                this.Estadistica.DefensaMagica += objeto.Estadistica.DefensaMagica;
-                this.Estadistica.PuntosDeVida += objeto.Estadistica.PuntosDeVida;
+                this.Estadisticas.Ataque += objeto.EstadisticaPotenciada.Ataque;
+                this.Estadisticas.Magia += objeto.EstadisticaPotenciada.Magia;
+                this.Estadisticas.Defensa += objeto.EstadisticaPotenciada.Defensa;
+                this.Estadisticas.DefensaMagica += objeto.EstadisticaPotenciada.DefensaMagica;
+                this.Estadisticas.PuntosDeVida += objeto.EstadisticaPotenciada.PuntosDeVida;
             }       
         }
 
@@ -79,11 +79,11 @@ namespace LibraryClass
             if (this.Objeto != null)
             {
                 this.Objeto = null;
-                this.Estadistica.Ataque -= objeto.Estadistica.Ataque;
-                this.Estadistica.Magia -= objeto.Estadistica.Magia;
-                this.Estadistica.Defensa -= objeto.Estadistica.Defensa;
-                this.Estadistica.DefensaMagica -= objeto.Estadistica.DefensaMagica;
-                this.Estadistica.PuntosDeVida -= objeto.Estadistica.PuntosDeVida;
+                this.Estadisticas.Ataque -= objeto.EstadisticaPotenciada.Ataque;
+                this.Estadisticas.Magia -= objeto.EstadisticaPotenciada.Magia;
+                this.Estadisticas.Defensa -= objeto.EstadisticaPotenciada.Defensa;
+                this.Estadisticas.DefensaMagica -= objeto.EstadisticaPotenciada.DefensaMagica;
+                this.Estadisticas.PuntosDeVida -= objeto.EstadisticaPotenciada.PuntosDeVida;
             }
 
             else

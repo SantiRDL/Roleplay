@@ -8,7 +8,7 @@ namespace LibraryClass
         public string Tipo; 
 
 
-        public Estadistica EstadisticaPotenciada = new Estadistica();
+        public Estadistica EstadisticaPotenciada;
 
 
         public Equipamiento(string nombre, string tipo, Estadistica estadisticaPotenciada)

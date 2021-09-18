@@ -7,7 +7,7 @@ namespace LibraryClass
         public Estadistica Estadisticas = new Estadistica(90, 80, 0, 100, 0);
         
         
-        public Equipamineto Objeto = null;
+        public Equipamiento Objeto = null;
         public Gigante(string nombre)
         {
             this.Nombre = nombre;

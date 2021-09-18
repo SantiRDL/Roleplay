@@ -99,7 +99,7 @@ namespace LibraryClass
         /// Toma un objeto de tipo libro y, en caso de que no haya ningun libro equipado, lo equipa en el atributo LibroDeHechizos.
         /// </summary>
         /// <param name="libro"></param>
-        public void EquiparLibro(Libro libro)
+        public void EquiparLibro(LibroHechizos libro)
         {
             if (this.LibroDeHechizos == null)
             {
@@ -114,7 +114,7 @@ namespace LibraryClass
         /// Desequipa el libro de Hechizos.
         /// </summary>
         /// <param name="libro"></param>
-        public void DesequiparLibro(Libro LibroHechizos)
+        public void DesequiparLibro(LibroHechizos LibroHechizos)
         {
             this.LibroDeHechizos = null;
         }
@@ -128,7 +128,7 @@ namespace LibraryClass
             if (this.LibroDeHechizos != null)
             {
                 personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.Ataque;
-                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.AtaqueHechizo} de daño");
+                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.Ataque} de daño");
             }
             else
             {
@@ -140,7 +140,7 @@ namespace LibraryClass
             if (this.LibroDeHechizos != null)
             {
                 personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.Ataque;
-                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.AtaqueHechizo} de daño");
+                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.Ataque} de daño");
             }
             else
             {
@@ -152,7 +152,7 @@ namespace LibraryClass
             if (this.LibroDeHechizos != null)
             {
                 personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.Ataque;
-                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.AtaqueHechizo} de daño");
+                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.Ataque} de daño");
             }
             else
             {
