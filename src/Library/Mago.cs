@@ -135,29 +135,5 @@ namespace LibraryClass
                 Console.WriteLine("No hay un libro de hechizos equipado.");
             }
         }
-        public void LanzarHechizo(Enano personajeAtacado)
-        {
-            if (this.LibroDeHechizos != null)
-            {
-                personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.Ataque;
-                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.Ataque} de daño");
-            }
-            else
-            {
-                Console.WriteLine("No hay un libro de hechizos equipado.");
-            }
-        }
-        public void LanzarHechizo(Elfo personajeAtacado)
-        {
-            if (this.LibroDeHechizos != null)
-            {
-                personajeAtacado.Estadisticas.PuntosDeVida -= this.LibroDeHechizos.Ataque;
-                Console.WriteLine($"El Mago {this.Nombre} lanza el hechizo {this.LibroDeHechizos.Nombre} causando {this.LibroDeHechizos.Ataque} de daño");
-            }
-            else
-            {
-                Console.WriteLine("No hay un libro de hechizos equipado.");
-            }
-        }
     }
 }

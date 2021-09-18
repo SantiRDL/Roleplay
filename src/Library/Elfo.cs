@@ -57,39 +57,6 @@ namespace LibraryClass
         public void Curar (Mago personajeAtacado)
         {
             personajeAtacado.Estadisticas.PuntosDeVida += this.Estadisticas.Magia;
-        }
-
-        
-
-        public void EquiparObjeto (Equipamiento objeto)
-        {
-            if (this.Objeto == null)
-            {
-                this.Objeto = objeto;
-                this.Estadisticas.Ataque += objeto.EstadisticaPotenciada.Ataque;
-                this.Estadisticas.Magia += objeto.EstadisticaPotenciada.Magia;
-                this.Estadisticas.Defensa += objeto.EstadisticaPotenciada.Defensa;
-                this.Estadisticas.DefensaMagica += objeto.EstadisticaPotenciada.DefensaMagica;
-                this.Estadisticas.PuntosDeVida += objeto.EstadisticaPotenciada.PuntosDeVida;
-            }       
-        }
-
-        public void DesequiparObjeto (Equipamiento objeto)
-        {
-            if (this.Objeto != null)
-            {
-                this.Objeto = null;
-                this.Estadisticas.Ataque -= objeto.EstadisticaPotenciada.Ataque;
-                this.Estadisticas.Magia -= objeto.EstadisticaPotenciada.Magia;
-                this.Estadisticas.Defensa -= objeto.EstadisticaPotenciada.Defensa;
-                this.Estadisticas.DefensaMagica -= objeto.EstadisticaPotenciada.DefensaMagica;
-                this.Estadisticas.PuntosDeVida -= objeto.EstadisticaPotenciada.PuntosDeVida;
-            }
-
-            else
-            {
-                Console.WriteLine ("No hay objetos para desequipar");
-            }
-        }
+        }        
     }
 }
