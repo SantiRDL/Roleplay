@@ -7,8 +7,10 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Equipamiento espada = new Equipamiento("espada", "arma", 0, 10, 0, 0 ,0);
-            Equipamiento capa = new Equipamiento("capa", "ropaje", 0, 0, 0, 10 ,10);
+            Estadistica uno = new Estadistica(0, 10, 0, 0 ,0);
+            Equipamiento espada = new Equipamiento("espada", "arma", uno);
+            Estadistica dos = new Estadistica(0, 0, 0, 10 ,10);
+            Equipamiento capa = new Equipamiento("capa", "ropaje", dos);
 
             Equipamiento arco = new Equipamiento("Arco", "arma", 0, 30, 0, 0, 0 );
             Equipamiento martillo = new Equipamiento("Martillo", "arma", 0, 25, 0, 0, 0 );
