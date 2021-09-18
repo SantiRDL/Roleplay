@@ -159,5 +159,9 @@ namespace LibraryClass
                 Console.WriteLine("No hay un libro de hechizos equipado.");
             }
         }
+        public int ObtenerAtaque()
+        {
+            return this.Estadisticas.Ataque;
+        }
     }
 }

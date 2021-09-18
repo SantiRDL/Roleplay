@@ -68,5 +68,9 @@ namespace LibraryClass
                 Console.WriteLine("No hay objetos que se puedan desequipar");
             }
         }
+        public int ObtenerAtaque()
+        {
+            return this.Estadisticas.Ataque;
+        }
     }
 }
