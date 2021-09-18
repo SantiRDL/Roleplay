@@ -5,21 +5,14 @@ namespace LibraryClass
     class Mago
     {
         public string Nombre;
-        public Estadistica Estadisticas = new Estadistica();
+        public Estadistica Estadisticas = new Estadistica(70, 10, 90, 20, 30);
         
         public Equipamiento Objeto = null;
         public LibroHechizos LibroDeHechizos = null;
 
         public Mago(string nombre)
         {
-            this.Nombre = nombre;
-
-            this.Estadisticas.Ataque = 10;
-            this.Estadisticas.PuntosDeVida = 70;
-            this.Estadisticas.Magia = 90;
-            this.Estadisticas.Defensa = 20;
-            this.Estadisticas.DefensaMagica = 30;
-            
+            this.Nombre = nombre;   
         }
 
         

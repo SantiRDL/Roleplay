@@ -4,7 +4,7 @@ namespace LibraryClass
     class Gigante 
     {
         public string Nombre;
-        public Estadistica Estadisticas = new Estadistica();
+        public Estadistica Estadisticas = new Estadistica(90, 80, 0, 100, 0);
         
         
         public Equipamineto Objeto = null;
@@ -12,11 +12,6 @@ namespace LibraryClass
         {
             this.Nombre = nombre;
             
-            this.Estadisticas.Ataque = 80;
-            this.Estadisticas.Defensa = 100;
-            this.Estadisticas.Magia = 0;
-            this.Estadisticas.DefensaMagica = 0;
-            this.Estadisticas.PuntosDeVida = 90;
         }
 
         public void AtaqueFisico(Enano personajeAtacado)
