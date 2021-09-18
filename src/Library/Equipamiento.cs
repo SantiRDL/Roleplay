@@ -2,7 +2,7 @@ using System;
 
 namespace LibraryClass
 {
-    class Equipamiento
+    public class Equipamiento
     {
         public string Nombre;
         public string Tipo; 

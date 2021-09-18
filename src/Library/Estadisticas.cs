@@ -2,7 +2,7 @@ using System;
 
 namespace LibraryClass
 {
-    class Estadistica
+     public class Estadistica
     {
         public Estadistica(int puntosDeVida, int ataque, int magia, int defensa, int defensaMagica)
         {

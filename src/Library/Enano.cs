@@ -2,7 +2,7 @@ using System;
 
 namespace LibraryClass
 {
-    class Enano
+    public class Enano
     {
         public Estadistica Estadisticas = new Estadistica(80, 100, 0, 60, 60);
         public Equipamiento Objeto;

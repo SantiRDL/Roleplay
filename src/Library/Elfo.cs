@@ -2,7 +2,7 @@ using System;
 
 namespace LibraryClass
 {
-    class Elfo 
+    public class Elfo 
     {
         public string Nombre;
         public Estadistica Estadisticas = new Estadistica(50, 50, 50, 50, 90);

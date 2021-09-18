@@ -1,7 +1,7 @@
 using System;
 namespace LibraryClass
 {
-    class Gigante 
+    public class Gigante 
     {
         public string Nombre;
         public Estadistica Estadisticas = new Estadistica(90, 80, 0, 100, 0);
