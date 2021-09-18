@@ -5,19 +5,13 @@ namespace LibraryClass
     class Elfo 
     {
         public string Nombre;
-        public Estadistica Estadisticas = new Estadistica ();
+        public Estadistica Estadisticas = new Estadistica(50, 50, 50, 50, 90);
 
         
         public Equipamineto Objeto = null;
-        public Elfos (string nombre)
+        public Elfo(string nombre)
         {
             this.Nombre = nombre;
-
-            this.Estadistica.Ataque = 50;
-            this.Estadistica.Magia = 50;
-            this.Estadistica.Defensa = 50;
-            this.Estadistica.DefensaMagica = 50;
-            this.Estadistica.PuntosDeVida = 90;
         }
 
         public void AtaqueFisico (Enano personajeAtacado)
