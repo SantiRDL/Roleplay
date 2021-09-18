@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using LibraryClass;
+
 
 namespace Test.Library
 {
@@ -8,12 +10,12 @@ namespace Test.Library
     {
 
         [Test]
-        public void dummyTest()
+        public void AtaqueFisicoTest()
         {
-            Assert.True(true);
+            Enano enano = new Enano("enano");
+            Gigante gigante = new Gigante("gigante");
+            Ataque.AtaqueFisico(enano, gigante);
+            Assert.AreEqual(gigante.Estadisticas.PuntosDeVida,10);
         }
-
     }
-
-
 }
