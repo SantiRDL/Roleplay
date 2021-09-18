@@ -22,5 +22,21 @@ namespace LibraryClass
         {
             return lista.Find(match => match.Nombre == nombre.Trim());
         }
+        public void EquiparLibro(LibroHechizos libro, Mago mago)
+        {
+            if (mago.LibroDeHechizos == null)
+            {
+                mago.LibroDeHechizos = libro;
+            }
+            else
+            {
+                Console.WriteLine("Ya hay un libro de hechizos equipado");
+            }
+        }
+        public void DesequiparLibro(LibroHechizos LibroHechizos, Mago mago)
+        {
+            mago.LibroDeHechizos = null;
+        }
+
     }
 }
